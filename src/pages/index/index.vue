@@ -1,8 +1,10 @@
 <template>
-  <h1>The Count is {{ count }}</h1>
-  <div :class="styles.hor">
-    <AtButton :class="styles.btn" @click="count += 1">add</AtButton>
-    <AtButton :class="styles.btn" @click="count = 0">zero</AtButton>
+  <div>
+    <h1>The Count is {{ count }}</h1>
+    <div :class="styles.hor">
+      <AtButton :class="styles.btn" @click="count += 1">add</AtButton>
+      <AtButton :class="styles.btn" @click="count = 0">zero</AtButton>
+    </div>
   </div>
 </template>
 
