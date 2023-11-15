@@ -48,7 +48,7 @@ function initStorageAPI(): Storage {
       },
 
       write(key: string, value: any): void {
-        localStorage.setItem(key, JSON.stringify(value))
+        Taro.setStorageSync(key, JSON.stringify(value))
       }
     }
   }
