@@ -15,4 +15,5 @@ import {toRefs} from "vue";
 
 const counter = useCounterStore()
 const {count} = toRefs(counter)
+console.log('sss')
 </script>

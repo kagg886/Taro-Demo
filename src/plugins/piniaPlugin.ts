@@ -44,7 +44,11 @@ function initStorageAPI(): Storage {
   } else {
     return {
       read(key: string): any {
-        return JSON.parse(Taro.getStorageSync(key))
+        const a = Taro.getStorageSync(key);
+        if (a.length === 0) {
+          return {}
+        }
+        return JSON.parse(a)
       },
 
       write(key: string, value: any): void {
